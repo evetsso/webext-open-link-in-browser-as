@@ -33,7 +33,7 @@ function openAs(data) {
   const url = data.linkUrl;
   debug("openAs", menuItemId, url);
 
-  // MIME type for selected option or null for "Server repored type"
+  // MIME type for selected option or null for "Server reported type"
   const mimeType = MIMES_HTTP[data.menuItemId];
   if (mimeType === undefined) {
     console.assert(mimeType, "Mime type not found for entry ", data.menuItemId);
@@ -102,7 +102,7 @@ function openAs(data) {
   }
 }
 
-browser.contextMenus.create({contexts: ["link"], id: MENU_IDS.server_type, title: "Server repored type"});
+browser.contextMenus.create({contexts: ["link"], id: MENU_IDS.server_type, title: "Server reported type"});
 browser.contextMenus.create({contexts: ["link"], id: MENU_IDS.text, title: "Text"});
 browser.contextMenus.create({contexts: ["link"], id: MENU_IDS.image, title: "Image"});
 browser.contextMenus.create({contexts: ["link"], id: MENU_IDS.pdf, title: "PDF"});
